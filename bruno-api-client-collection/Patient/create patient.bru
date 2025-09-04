@@ -1,0 +1,31 @@
+meta {
+  name: create patient
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:8000/api/patients/?format=json
+  body: json
+  auth: inherit
+}
+
+params:query {
+  format: json
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU3NTUyMzg0LCJpYXQiOjE3NTY5NDc1ODQsImp0aSI6ImIwMWE4YWIzZjhjMTQ1Yjk4ZmE4MThjNGVhZTgwN2Q0IiwidXNlcl9pZCI6IjQifQ.s8FkMbyN3n1jEdcFObw7BFlSovGfZChnR_64H7T9tPU
+}
+
+body:json {
+  {
+    "email": "p2@gmail.com",
+    "name": "Patient two",
+    "symptoms": "headache"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

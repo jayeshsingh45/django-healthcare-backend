@@ -1,0 +1,26 @@
+meta {
+  name: Login user
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:8000/api/auth/login/?format=json
+  body: json
+  auth: inherit
+}
+
+params:query {
+  format: json
+}
+
+body:json {
+  {
+    "email": "test4@gmail.com",
+    "password": "test412345"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

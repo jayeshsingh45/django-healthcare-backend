@@ -1,0 +1,30 @@
+meta {
+  name: Retrieve all patient-doctor mappings
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://127.0.0.1:8000/api/mappings/?format=json
+  body: none
+  auth: inherit
+}
+
+params:query {
+  format: json
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU3NTUyMDQ3LCJpYXQiOjE3NTY5NDcyNDcsImp0aSI6IjcxZTg4OWQwNTYzYTQ1MDg4ZjRhMzQ5Yzg1YzIzOGNiIiwidXNlcl9pZCI6IjIifQ.tYVyGAtUzUISxry6uRFw8v7Ly1cQxsQUN0szCMB0vu8
+}
+
+body:json {
+  {
+    "patient": 1,
+    "doctor": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}
